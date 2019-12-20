@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Runtime: python3.7
+    Environment:
+      Variables:
+        LOG_LEVEL: INFO
+    Timeout: 5
+
+Resources:
+  Up:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: app
+      Handler: handlers.up.handle
+      Tracing: Active
+      Policies:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+        - arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess
