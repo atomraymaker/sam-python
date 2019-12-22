@@ -1,1 +1,4 @@
+.venv
+!\{\{\ cookiecutter.project_name\ \}\}/.vscode
 .vscode
+.mypy_cache

@@ -4,17 +4,18 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-black = "*"
-pylint = "*"
-pytest = "*"
-pytest-mock = "*"
-pytest-env = "*"
 aws-sam-cli = "*"
-pytest-pythonpath = "*"
+black = "*"
 cfn-lint = "*"
 mypy = "*"
-moto = "*"
-placebo = "*"
+pylint = "*"
+pytest = "*"
+pytest-env = "*"
+pytest-mock = "*"
+pytest-pythonpath = "*"
+pytest-random = "*"
+pytest-sugar = "*"
+pytest-watch = "*"
 
 [packages]
 boto3 = "*"

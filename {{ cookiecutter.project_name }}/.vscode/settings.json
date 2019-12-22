@@ -1,0 +1,13 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+    },
+    "editor.formatOnSave": true,
+    "python.formatting.blackPath": ".venv/bin/black",
+    "python.linting.mypyPath": ".venv/bin/mypy",
+    "python.linting.pylintPath": ".venv/bin/pylint",
+    "python.pythonPath": ".venv/bin/python3.7",
+    "files.autoSave": "onFocusChange",
+    "python.linting.mypyEnabled": true,
+    "python.formatting.provider": "black"
+}
