@@ -15,11 +15,11 @@ pytest-cov = "*"
 pytest-env = "*"
 pytest-mock = "*"
 pytest-pythonpath = "*"
-pytest-random = "*"
 pytest-sugar = "*"
 pytest-watch = "*"
 pytest-pylint = "*"
 pytest-mypy = "*"
+pytest-randomly = "*"
 
 [packages]
 boto3 = "*"
