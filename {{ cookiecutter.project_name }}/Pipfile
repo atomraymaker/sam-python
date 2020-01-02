@@ -23,6 +23,7 @@ pytest-watch = "*"
 
 [packages]
 boto3 = "*"
+structlog = "*"
 
 [requires]
 python_version = "3.7"
