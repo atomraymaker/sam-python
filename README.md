@@ -39,4 +39,4 @@ Due to how SAM packages code, it can be difficult to get imports to work in unit
 
 ## Structlog
 
-TODO
+Structured logging is better, see: [http://www.structlog.org/en/stable/](http://www.structlog.org/en/stable/)
