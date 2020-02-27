@@ -7,7 +7,5 @@
     "python.formatting.provider": "black",
     "editor.codeActionsOnSave": {
         "source.organizeImports": true,
-    },
-    "files.autoSave": "onFocusChange",
-    "editor.formatOnSave": true
+    }
 }
