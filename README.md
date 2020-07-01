@@ -2,18 +2,17 @@
 
 A cookie cutter template for AWS SAM.
 
-Usage:
+- pipenv
+- pytest
+- black
+- pylint
+- mypy
+- pytest-pythonpath
+
+## Usage
 
 `sam init --location gh:atomraymaker/sam-python`
 
-Includes:
-
-- pytest
-- pytest-cov
-- pytest-pylint
-- pytest-mypy
-- pytest-black
-- and more...
 
 ## Configuration
 
@@ -40,3 +39,7 @@ Due to how SAM packages code, it can be difficult to get imports to work in unit
 ## Structlog
 
 Structured logging is better, see: [http://www.structlog.org/en/stable/](http://www.structlog.org/en/stable/)
+
+### Powertools
+
+It might be worth replacing this logging with? [Lambda Powertools](https://github.com/awslabs/aws-lambda-powertools-python)

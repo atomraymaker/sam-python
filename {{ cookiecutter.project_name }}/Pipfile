@@ -26,3 +26,9 @@ python_version = "3.7"
 
 [pipenv]
 allow_prereleases = true
+
+[scripts]
+test = "pytest tests --cov=app --cov-report term"
+test-html = "pytest tests --cov=app --cov-report html:coverage/html"
+shell = "pipenv run python -i shell.py"
+deploy = "./deploy.sh"
