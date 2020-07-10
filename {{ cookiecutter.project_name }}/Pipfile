@@ -13,16 +13,15 @@ pytest = "*"
 pytest-cov = "*"
 pytest-env = "*"
 pytest-mock = "*"
-pytest-pythonpath = "*"
-pytest-randomly = "*"
-pytest-watch = "*"
+watchdog = "*"
 
 [packages]
+aws-lambda-powertools = "*"
 boto3 = "*"
-structlog = "*"
+pytest-pythonpath = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
 
 [pipenv]
 allow_prereleases = true
@@ -30,5 +29,7 @@ allow_prereleases = true
 [scripts]
 test = "pytest tests --cov=app --cov-report term"
 test-html = "pytest tests --cov=app --cov-report html:coverage/html"
+watch = "watchmedo shell-command --patterns='*.py;*.txt' --recursive --command='pipenv run test-html -s'"
 shell = "pipenv run python -i shell.py"
-deploy = "./deploy.sh"
+deploy = "pipenv lock --requirements > app/requirements.txt && sam build && sam deploy"
+deploy-guided = "pipenv lock --requirements > app/requirements.txt && sam build && sam deploy --guided"
