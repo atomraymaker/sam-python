@@ -1,9 +1,10 @@
 # AWS SAM Python Cookiecutter
 
-A cookie cutter template for AWS SAM.
+A cookie cutter template for AWS SAM Python.
 
 - pipenv
 - pytest
+- aws-lambda-powertools
 - black
 - pylint
 - mypy
@@ -12,7 +13,6 @@ A cookie cutter template for AWS SAM.
 ## Usage
 
 `sam init --location gh:atomraymaker/sam-python`
-
 
 ## Configuration
 
@@ -28,18 +28,10 @@ Isort is enabled on save in vscode settings by:
 
 Configuration is customized in isort.cfg to be consistent with black as per [these docs](https://black.readthedocs.io/en/stable/the_black_code_style.html) (search for isort)
 
-## Venv
+### Venv
 
 Using `PIPENV_VENV_IN_PROJECT=true` will create a .venv in the project folder. There is vscode config to reference the project python, black, pylint, and mypy rather than any global installs of these.
 
-## pytest-pythonpath
+### pytest-pythonpath
 
 Due to how SAM packages code, it can be difficult to get imports to work in unit tests and also when deployed. Referencing `CodeUri: app` causes SAM to package everythin in the app directory. It doesn't include the app directory, anything in there ends up at the top level when deployed. This means that `from app import module` does not work when deployed, but  `import module` doesn't work locally since it is nested in the app folder. Using `pytest-pythonpath` fixes this by moving everything in app to the top level, emulating the deployed state.
-
-## Structlog
-
-Structured logging is better, see: [http://www.structlog.org/en/stable/](http://www.structlog.org/en/stable/)
-
-### Powertools
-
-It might be worth replacing this logging with? [Lambda Powertools](https://github.com/awslabs/aws-lambda-powertools-python)

@@ -13,12 +13,12 @@ pytest = "*"
 pytest-cov = "*"
 pytest-env = "*"
 pytest-mock = "*"
+pytest-pythonpath = "*"
 watchdog = "*"
 
 [packages]
 aws-lambda-powertools = "*"
 boto3 = "*"
-pytest-pythonpath = "*"
 
 [requires]
 python_version = "3.8"
