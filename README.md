@@ -4,7 +4,6 @@ A cookie cutter template for AWS SAM Python.
 
 - pipenv
 - pytest
-- aws-lambda-powertools
 - black
 - pylint
 - mypy

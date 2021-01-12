@@ -17,7 +17,6 @@ pytest-pythonpath = "*"
 watchdog = "*"
 
 [packages]
-aws-lambda-powertools = "*"
 boto3 = "*"
 
 [requires]
